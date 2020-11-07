@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Guau | Hotel Canino</title>
+		<meta charset="utf-8" />
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+			* {
+				padding:0;
+				margin:0;
+			}
+			html {
+				background-color:f1f1f1;
+			}
+			body {
+				width:100%;
+				height:100%;
+				background-color:#f1f1f1;
+				margin:auto;
+				background-image:
+				url('header y fondo/fondo.png');
+			}
+			header {
+				width:100%;
+				height:200px;
+				background-color:#ff8c00;
+				display: flex;
+				justify-content: center;
+				background-image:
+				url('header y fondo/fondoHeader.png');
+			}
+			nav {
+				align-items: center;
+				width:100%;
+				height:50px;
+				background-color:#f1f1f1;
+				border-top: 3px solid black;
+				border-bottom: 3px solid black;
+				display: flex;
+				justify-content: center;
+			}
+			nav a{
+				font-family: 'Oswald', sans-serif;
+				font-weight:500;
+				text-transform:uppercase;
+				text-decoration:none;
+				color:#16151b;
+				margin:0 15px;
+				font-size:16px;
+				letter-spacing:1px;
+				position:relative;
+				display:inline-block;
+			}
+			nav a:hover {
+				font-size:17px;
+				color:#ff8c00;
+			}
+			nav a:before{
+				content:'';
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				background:#16151b;
+				top:80%;
+				animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+			}
+			nav a:hover:before{
+				animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+			}
+			@keyframes in{
+				0%{
+					width: 0;
+					left:0;
+					right:auto;
+				}
+				100%{
+					left:0;
+					right:auto;
+					width: 100%;
+				}
+			}
+			@keyframes out{
+				0%{
+					width:100%;
+					left: auto;
+					right: 0;
+				}
+				100%{
+					width: 0;
+					left: auto;
+					right: 0;
+				}
+			}
+			@keyframes show{
+				0%{
+					opacity:0;
+					transform:translateY(-10px);
+				}
+				100%{
+					opacity:1;
+					transform:translateY(0);
+				}
+			}
+
+			@for $i from 1 through 5 {
+				nav a:nth-child(#{$i}){
+					animation:show .2s #{$i*0.1+1}s ease 1 both;
+				}
+			}	
+			main {
+				margin:auto;
+				padding:20px;
+				width:800px;
+				height:100%;
+				background-color:#f1f1f1;
+				justify-content: left;
+				font-size:20px;
+			}
+			main p {
+				text-indent:50px;
+			}
+			main strong {
+				font-size:32px;
+			}
+			main h1 {
+				
+				font-size:40px;
+				text-align:center;
+			}
+			footer {
+				padding:20px;
+				margin:auto;
+				align-items: center;
+				width:800px;
+				height:50px;
+				background-color:#f1f1f1;
+				justify-content: left;
+				display: flex;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<img src="header y fondo/logo.png" width="362" height="200">
+		</header>
+		<nav>
+			<a style="margin-right:10px;" class="BotonNav" href="index.html">Sobre Nosotros</a>
+			<a style="margin-right:10px;margin-left:10px;" class="BotonNav" href="Proyecto Web 2.html">Instalaciones</a>
+			<a style="margin-right:10px;margin-left:10px;" class="BotonNav" href="Proyecto Web 3.html">Habitaciones</a>
+			<a style="margin-left:10px;" class="BotonNav" href="Proyecto Web 4.html">Manual</a>
+		</nav>
+		<main>
+			<p> <br></p>
+			<p> <br></p>
+			<h1>Quiénes Somos?<br></h1>
+			<p> <br></p>
+
+			<p><strong>N</strong>uestro Hotel <b>GUAU</b>, es exclusivo para mascotas caninas. Está situado en la ciudad de <i>Piriápolis</i>, en el departamento de <i>Maldonado</i>, <i>Calle 8</i> y <i>Atanasio Sierra</i>, barrio <i>La Falda</i>, en un lugar muy bien localizado y bonito. El terreno ocupa una extensión de tres hectáreas aproximadamente y consta de diferentes espacios, mucho prado verde y un monte con una pequeña cañada totalmente autóctonos.</p>
+			<p><strong>O</strong>frecemos un nuevo concepto de residencia canina. Sobre todo un trato con el perro muy familiar, lo que queremos realmente, es que mientras usted se encuentre fuera, su perro se sienta lo mejor posible. Intentamos que para él sea como ir de paseo, pueda relacionarse con otros perros, correr y jugar, o simplemente mimarlo tanto como él nos lo permita.</p>
+			<p><strong>N</strong>uestras instalaciones son modernas y adaptadas a los nuevos tiempos, para dar un confort y bienestar inmejorable a su mascota. Contamos con piscinas exclusivas para mascotas. También un servicio de retiro y entrega a domicilio de mascotas con vehículos totalmente adaptados, servicio de WebCam para ver su perro desde dispositivos móviles Android y Apple, a cargo de la empresa <b>SVL GROUP®</b>, que ya se encuentra en funcionamiento con excelentes resultados.</p>
+			<p><strong>A</strong>brimos nuestras puertas hace tan solo tres meses, por lo que aún nos estamos ajustando a todo nuestro potencial.</p>
+		</main>
+		<footer>
+		<a title="Twitch" href="http://www.twitch.tv/justaplayer_tex"><img src="https://pngimg.com/uploads/twitch/twitch_PNG48.png" height="20px" width="20px" alt="Los Tejos" /></a>
+		</footer>
+	</body>
+</html>
