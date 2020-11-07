@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Guau | Hotel Canino</title>
+		<meta charset="utf-8" />
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+			* {
+				padding:0;
+				margin:0;
+			}
+			html {
+				background-color:f1f1f1;
+			}
+			body {
+				width:100%;
+				height:100%;
+				background-color:#f1f1f1;
+				margin:auto;
+				background-image:
+				url('header y fondo/fondo.png');
+			}
+			header {
+				width:100%;
+				height:200px;
+				background-color:#ff8c00;
+				display: flex;
+				justify-content: center;
+				background-image:
+				url('header y fondo/fondoHeader.png');
+			}
+			nav {
+				align-items: center;
+				width:100%;
+				height:50px;
+				background-color:#f1f1f1;
+				border-top: 3px solid black;
+				border-bottom: 3px solid black;
+				display: flex;
+				justify-content: center;
+			}
+			nav a{
+				font-family: 'Oswald', sans-serif;
+				font-weight:500;
+				text-transform:uppercase;
+				text-decoration:none;
+				color:#16151b;
+				margin:0 15px;
+				font-size:16px;
+				letter-spacing:1px;
+				position:relative;
+				display:inline-block;
+			}
+			nav a:hover {
+				font-size:17px;
+				color:#ff8c00;
+			}
+			nav a:before{
+				content:'';
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				background:#16151b;
+				top:80%;
+				animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+			}
+			nav a:hover:before{
+				animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+			}
+			@keyframes in{
+				0%{
+					width: 0;
+					left:0;
+					right:auto;
+				}
+				100%{
+					left:0;
+					right:auto;
+					width: 100%;
+				}
+			}
+			@keyframes out{
+				0%{
+					width:100%;
+					left: auto;
+					right: 0;
+				}
+				100%{
+					width: 0;
+					left: auto;
+					right: 0;
+				}
+			}
+			@keyframes show{
+				0%{
+					opacity:0;
+					transform:translateY(-10px);
+				}
+				100%{
+					opacity:1;
+					transform:translateY(0);
+				}
+			}
+
+			@for $i from 1 through 5 {
+				nav a:nth-child(#{$i}){
+					animation:show .2s #{$i*0.1+1}s ease 1 both;
+				}
+			}	
+			main {
+				margin:auto;
+				padding:20px;
+				width:800px;
+				height:100%;
+				background-color:#f1f1f1;
+				justify-content: left;
+				font-size:20px;
+			}
+			main p {
+				text-indent:50px;
+			}
+			main strong {
+				font-size:32px;
+			}
+			main h1 {
+				
+				font-size:40px;
+				text-align:center;
+			}
+			main dl {
+				margin-left:50px;
+			}
+			main li {
+				margin-left:70px;
+			}
+			main table, td, th {
+				align-items:center;
+				justify-content: center;
+				text-align:center;
+				border: 1px solid black;
+				border-spacing: 10px;
+				border-collapse: collapse;
+			}
+			main img {
+				border: 1px solid black;
+			}
+			main img:hover {
+				transform:scale(1.2,1.2);
+				border: 3px solid black;
+			}
+			footer {
+				padding:20px;
+				margin:auto;
+				align-items: center;
+				width:800px;
+				height:50px;
+				background-color:#f1f1f1;
+				justify-content: left;
+				display: flex;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<img src="header y fondo/logo.png" width="362" height="200">
+		</header>
+		<nav>
+			<a style="margin-right:10px;" class="BotonNav" href="Proyecto Web 1.html">Sobre Nosotros</a>
+			<a style="margin-right:10px;margin-left:10px;" class="BotonNav" href="Proyecto Web 2.html">Instalaciones</a>
+			<a style="margin-right:10px;margin-left:10px;" class="BotonNav" href="Proyecto Web 3.html">Habitaciones</a>
+			<a style="margin-left:10px;" class="BotonNav" href="Proyecto Web 4.html">Manual</a>
+		</nav>
+		<main>
+			<p> <br></p>
+			<p> <br></p>
+			<h1>Las Habitaciones<br></h1>
+			<p> <br></p>
+			
+			<p><strong>C</strong>ontamos con un conjunto de habitaciones, estas varían en tamaño y servicios para las mascotas.</p>
+			<p><strong>A</strong> continuacion se detallarán las habitaciones y características.
+			<p> <br></p>
+			<dl>
+				<dt><b><span>Habitacion Estandar:</span></b></dt>
+				<dd>
+					<ul>
+						<li>Habitaciones individuales para uno, dos o tres perros del mismo propietario.</li>
+						<li>8 m2 de zona interior alicatada, 10 m2 exterior con arena y zona verde.</li>
+						<li>Calefacción radiante independiente con termostato y sonda térmica de seguridad.</li>
+						<li>Aislamiento total y aire acondicionado.</li>
+						<li>Acceso a zona verde común con piscina y zona de recreo.</li>
+					</ul>
+					<p> <br></p>
+					<center><img src="habitaciones/Estandar/habitacion.jpg" height="234px" width="350px" alt="Habitacion"/> <img src="habitaciones/Estandar/habitacion2.jpg" height="233px" width="350px" alt="Habitacion2"/></center>
+					<p> <br></p>
+					<center><table>
+						<tr>
+							<th><b>Cantidad de Perros</b></th>
+							<th><b>Precio por día</b></th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>28 dólares</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>40 dólares</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>56 dólares</td>
+						</tr>
+					</table></center>
+		
+				</dd>
+				<p> <br></p>
+				<dt><b><span>Habitacion Mini Suite:</span></b></dt>
+				<dd>
+					<ul>
+						<li>Habitaciones individuales para perros hasta 12 kg.</li>
+						<li>6 m2 habitación interior y 10 m2 de exterior alicatado y cubierto completamente.</li>
+						<li>Calefacción radiante independiente con termostato y sonda térmica de seguridad.</li>
+						<li>Aislamiento total y aire acondicionado.</li>
+						<li>Hilo musical con música relajante para las horas de descanso.</li>
+						<li>Acceso a zona verde común con piscina y zona de recreo.</li>
+					</ul>
+					<p> <br></p>
+					<center><img src="habitaciones/Mini Suite/habitacion.jpg" height="234px" width="350px" alt="Habitacion"/></center>
+					<p> <br></p>
+					<center><table>
+						<tr>
+							<th><b>Cantidad de Perros</b></th>
+							<th><b>Precio por día</b></th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>31 dólares</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>46,5 dólares</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>62 dólares</td>
+						</tr>
+					</table></center>
+				</dd>
+					<p> <br></p>
+					
+				<dt><b><span>Habitacion Junior Suite:</span></b></dt>
+				<dd>
+					<ul>
+						<li>Habitaciones individuales para uno, dos o tres perros del mismo propietario.</li>
+						<li>8 m2 de zona interior alicatada, 15 m2 exterior con arena y zona verde.</li>
+						<li>Calefacción radiante independiente con termostato y sonda térmica de seguridad.</li>
+						<li>Aislamiento total y aire acondicionado.</li>
+						<li>Hilo musical con música relajante para las horas de descanso.</li>
+						<li>Acceso a zona verde común con piscina y zona de recreo.</li>
+					</ul>
+					<p> <br></p>
+					<center><img src="habitaciones/Junior Suite/Habitacion.png" height="197px" width="350px" alt="Habitacion"/> <img src="habitaciones/Junior Suite/Webcams.jpg" height="197px" width="350px" alt="Webcams"/></center>
+					<p> <br></p>
+					<center><table>
+						<tr>
+							<th><b>Cantidad de Perros</b></th>
+							<th><b>Precio por día</b></th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>31 dólares</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>46,5 dólares</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>62 dólares</td>
+						</tr>
+					</table></center>
+				</dd>
+				<p> <br></p>
+				<p> <br></p>
+				<dt><b><span>Habitacion Suite:</span></b></dt>
+				<dd>
+					<ul>
+						<li>Habitaciones individuales para uno, dos o tres perros del mismo propietario.</li>
+						<li>10 m2 de zona interior alicatada, 20m2 de exterior con arena y zona verde.</li>
+						<li>Calefacción radiante independiente con termostato y sonda térmica de seguridad.</li>
+						<li>Aislamiento total y aire acondicionado.</li>
+						<li>Hilo musical con música relax para las horas de descanso.</li>
+						<li>Webcam para ver su perro desde dispositivos móviles Android y Apple.</li>
+						<li>Televisión LCD alta definición con canal DogTv especial para perros.</li>
+						<li>Acceso a zona verde común con piscina y zona de recreo</li>
+					</ul>
+					<p> <br></p>
+					<center><img src="habitaciones/Suite/Habitacion.jpg" height="263px" width="350px" alt="Habitacion"/> <img src="habitaciones/Suite/Entrada.jpg" height="263px" width="350px" alt="Entrada"/></center>
+					<center><img src="habitaciones/Suite/Tele.jpg" height="263px" width="350px" alt="Tele"/> <img src="habitaciones/Suite/NOSE.jpg" height="263px" width="350px" alt="Foto"/></center>
+					<p> <br></p>
+					<center><table>
+						<tr>
+							<th><b>Cantidad de Perros</b></th>
+							<th><b>Precio por día</b></th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>34 dólares</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>51 dólares</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>68 dólares</td>
+						</tr>
+						<tr>
+							<th><b>Servicio de WebCam</b></th>
+							<th><b>+ 4 dólares por día</b></th>
+						</tr>
+						<tr>
+							<th><b>DogTV</b></th>
+							<th><b>+ 2 dólares por día</b></th>
+						</tr>
+					</table></center>
+				</dd>
+					<p> <br></p>
+			</dl>
+		</main>
+		<footer>
+		<a title="Twitch" href="http://www.twitch.tv/justaplayer_tex"><img src="https://pngimg.com/uploads/twitch/twitch_PNG48.png" height="20px" width="20px" alt="Los Tejos" /></a>
+		</footer>
+	</body>
+</html>
